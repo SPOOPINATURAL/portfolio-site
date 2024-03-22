@@ -1,0 +1,709 @@
+.mediaViewInfo {
+	--web-view-name:web;
+	--web-view-id:web;
+	--web-scale-to-fit:true;
+	--web-scale-to-fit-type:width;
+	--web-enable-scale-up:true;
+	--web-scale-on-resize:true;
+	--web-application:true;
+	--web-enable-deep-linking:true;
+	--web-page-font:Roboto Mono,Eczar-Bold
+	}
+	
+	:root {
+	--web-view-ids:web
+	}
+	
+	* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	border:none
+	}
+	
+	#web {
+	position:absolute;
+	width:1920px;
+	height:5912px;
+	font-family:Roboto Mono,Eczar-Bold;
+	background-color:#3d050cff;
+	overflow-y:scroll;
+	--web-view-name:web;
+	--web-view-id:web;
+	--web-scale-to-fit:true;
+	--web-scale-to-fit-type:width;
+	--web-enable-scale-up:true;
+	--web-scale-on-resize:true;
+	--web-application:true;
+	--web-enable-deep-linking:true;
+	--web-page-font:Roboto Mono,Eczar-Bold
+	}
+	
+	#spoopibg {
+	opacity:.3;
+	position:fixed;
+	left:0;
+	top:0;
+	}
+	
+	#contact {
+	position:absolute;
+	width:1619px;
+	height:922.667px;
+	left:231px;
+	top:4824.333px;
+	overflow:visible
+	}
+	
+	#form {
+	position:absolute;
+	width:850px;
+	height:721px;
+	left:769px;
+	top:154.667px;
+	overflow:visible
+	}
+	
+	#button {
+	position:absolute;
+	width:198px;
+	height:71px;
+	left:0;
+	top:650px;
+	overflow:visible
+	}
+	
+	#Rectangle {
+	fill:transparent;
+	stroke:#fff1c2ff;
+	stroke-width:4px;
+	stroke-linejoin:miter;
+	stroke-linecap:butt;
+	stroke-miterlimit:10;
+	shape-rendering:auto
+	}
+	
+	.Rectangle {
+	position:absolute;
+	overflow:visible;
+	width:198px;
+	height:71px;
+	left:0;
+	top:0
+	}
+	
+	#SEND {
+	left:62px;
+	top:17px;
+	position:absolute;
+	overflow:visible;
+	width:75px;
+	white-space:nowrap;
+	text-align:center;
+	font-family:Poppins-Regular,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:23px;
+	color:#fff1c2ff;
+	letter-spacing:2.5px;
+	text-transform:uppercase
+	}
+	
+	#message {
+	position:absolute;
+	width:850px;
+	height:199px;
+	left:0;
+	top:415px;
+	overflow:visible
+	}
+	
+	#Rectangle_o {
+	fill:#fff1c2ff;
+	stroke:#fff1c2ff;
+	stroke-width:1px;
+	stroke-linejoin:miter;
+	stroke-linecap:butt;
+	stroke-miterlimit:4;
+	shape-rendering:auto
+	}
+	
+	.Rectangle_o {
+	position:absolute;
+	overflow:visible;
+	width:851px;
+	height:2px;
+	left:0;
+	top:198px
+	}
+	
+	#Your_Message {
+	opacity:.638;
+	left:0;
+	top:59px;
+	position:absolute;
+	overflow:visible;
+	width:160px;
+	white-space:nowrap;
+	text-align:left;
+	font-family:Karla-Regular,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:26px;
+	color:#fff1c2ff
+	}
+	
+	#MESSAGE_q {
+	left:0;
+	top:0;
+	position:absolute;
+	overflow:visible;
+	width:109px;
+	white-space:nowrap;
+	text-align:left;
+	font-family:Poppins-Regular,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:17px;
+	color:#fff1c2ff;
+	letter-spacing:3.0769232177734px
+	}
+	
+	#email {
+	position:absolute;
+	width:850px;
+	height:134px;
+	left:0;
+	top:194px;
+	overflow:visible
+	}
+	
+	#Rectangle_s {
+	fill:#fff1c2ff;
+	stroke:#fff1c2ff;
+	stroke-width:1px;
+	stroke-linejoin:miter;
+	stroke-linecap:butt;
+	stroke-miterlimit:4;
+	shape-rendering:auto
+	}
+	
+	.Rectangle_s {
+	position:absolute;
+	overflow:visible;
+	width:851px;
+	height:2px;
+	left:0;
+	top:133px
+	}
+	
+	#Your_Email {
+	opacity:.638;
+	left:0;
+	top:62px;
+	position:absolute;
+	overflow:visible;
+	width:116px;
+	white-space:nowrap;
+	text-align:left;
+	font-family:Karla-Regular,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:25px;
+	color:#fff1c2ff
+	}
+	
+	#EMAIL_u {
+	left:0;
+	top:0;
+	position:absolute;
+	overflow:visible;
+	width:68px;
+	white-space:nowrap;
+	text-align:left;
+	font-family:Poppins-Regular,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:17px;
+	color:#fff1c2ff;
+	letter-spacing:3.0769232177734px
+	}
+	
+	#name {
+	position:absolute;
+	width:850px;
+	height:120.402px;
+	left:0;
+	top:0;
+	overflow:visible
+	}
+	
+	#Rectangle_w {
+	fill:#fff1c2ff;
+	stroke:#fff1c2ff;
+	stroke-width:1px;
+	stroke-linejoin:miter;
+	stroke-linecap:butt;
+	stroke-miterlimit:4;
+	shape-rendering:auto
+	}
+	
+	.Rectangle_w {
+	overflow:visible;
+	position:absolute;
+	width:851px;
+	height:2.229px;
+	left:0;
+	top:119.174px;
+	transform:matrix(1,0,0,1,0,0)
+	}
+	
+	#Your_Name {
+	opacity:.638;
+	left:0;
+	top:47px;
+	position:absolute;
+	overflow:visible;
+	width:89px;
+	white-space:nowrap;
+	text-align:left;
+	font-family:Karla-Regular,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:27px;
+	color:#fff1c2ff
+	}
+	
+	#NAME_y {
+	left:0;
+	top:0;
+	position:absolute;
+	overflow:visible;
+	width:92px;
+	white-space:nowrap;
+	text-align:left;
+	font-family:Poppins-Regular,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:15px;
+	color:#fff1c2ff;
+	letter-spacing:3.0769232177734px
+	}
+	
+	#gunterroses {
+	position:absolute;
+	width:729px;
+	height:730px;
+	left:0;
+	top:192.667px;
+	overflow:visible
+	}
+	
+	#contact_ {
+	left:257.384px;
+	top:0;
+	position:absolute;
+	overflow:visible;
+	width:966px;
+	height:106px;
+	text-align:center;
+	font-family:Eczar-Bold,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:80px;
+	color:#fff1c2ff
+	}
+	
+	#about {
+	position:absolute;
+	width:1618.909px;
+	height:1447.012px;
+	left:231px;
+	top:3321.47px;
+	overflow:visible
+	}
+	
+	#aboutdesc {
+	left:896.909px;
+	top:270.012px;
+	position:absolute;
+	overflow:visible;
+	width:723px;
+	height:1177px;
+	line-height:50px;
+	margin-top:-11px;
+	text-align:left;
+	font-family:RobotoMono-Regular,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:28px;
+	color:#fff1c2ff
+	}
+	
+	#abouttheartist {
+	left:172.075px;
+	top:0;
+	position:absolute;
+	overflow:visible;
+	width:1171px;
+	height:106px;
+	text-align:center;
+	font-family:Eczar-Bold,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:80px;
+	color:#fff1c2ff
+	}
+	
+	#foliothing {
+	position:absolute;
+	width:822px;
+	height:1132px;
+	left:0;
+	top:228.512px;
+	overflow:visible
+	}
+	
+	#nav {
+	position:absolute;
+	width:1708.667px;
+	height:140px;
+	left:117px;
+	top:0;
+	overflow:visible
+	}
+	
+	#Component_18 {
+	position:absolute;
+	width:272.091px;
+	height:41.108px;
+	left:1436.576px;
+	top:59.892px;
+	overflow:visible
+	}
+	
+	#social-instagram_-_simple-line {
+	fill:#fff1c2ff
+	}
+	
+	.social-instagram_-_simple-line {
+	overflow:visible;
+	position:absolute;
+	width:41px;
+	height:41px;
+	left:231.424px;
+	top:.108px;
+	transform:matrix(1,0,0,1,0,0)
+	}
+	
+	#YouTube-Icon-White-Logowine {
+	fill:#fff1c2ff
+	}
+	
+	.YouTube-Icon-White-Logowine {
+	overflow:visible;
+	position:absolute;
+	width:57.961px;
+	height:40.836px;
+	left:0;
+	top:.107px;
+	transform:matrix(1,0,0,1,0,0)
+	}
+	
+	#tumblr-white-icon {
+	fill:#fff1c2ff
+	}
+	
+	.tumblr-white-icon {
+	overflow:visible;
+	position:absolute;
+	width:23.183px;
+	height:40.943px;
+	left:133.788px;
+	top:0;
+	transform:matrix(1,0,0,1,0,0)
+	}
+	
+	#mordecaihsu {
+	left:0;
+	top:56px;
+	position:absolute;
+	overflow:visible;
+	width:478px;
+	white-space:nowrap;
+	text-align:left;
+	font-family:Poppins-Regular,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:15px;
+	color:#fff1c2ff;
+	letter-spacing:2.5px;
+	text-transform:uppercase
+	}
+	
+	#spoopilogowhite {
+	position:absolute;
+	width:80.606px;
+	height:140px;
+	left:830.783px;
+	top:0;
+	overflow:visible
+	}
+	
+	#spoopilogowhite_bc {
+	position:absolute;
+	width:80.606px;
+	height:140px;
+	left:0;
+	top:0;
+	overflow:visible
+	}
+	
+	#gallery {
+	position:absolute;
+	width:1646.484px;
+	height:2041.861px;
+	left:201.425px;
+	top:1147.018px;
+	overflow:visible
+	}
+	
+	#pfp {
+	filter:drop-shadow(0px 3px 6px #00000029);
+	position:absolute;
+	width:750px;
+	height:422px;
+	left:0;
+	top:181.964px;
+	overflow:visible
+	}
+	
+	#ethanbg1 {
+	filter:drop-shadow(0px 3px 6px #00000029);
+	position:absolute;
+	width:876.969px;
+	height:202.291px;
+	left:769.516px;
+	top:181.964px;
+	overflow:visible
+	}
+	
+	#kritzposter {
+	filter:drop-shadow(0px 3px 6px #00000029);
+	position:absolute;
+	width:378.6px;
+	height:569.395px;
+	left:769.516px;
+	top:1425.75px;
+	overflow:visible
+	}
+	
+	#theoryqf {
+	filter:drop-shadow(0px 3px 6px #00000029);
+	position:absolute;
+	width:470.484px;
+	height:616.11px;
+	left:1176px;
+	top:1425.75px;
+	overflow:visible
+	}
+	
+	#osiantranches {
+	filter:drop-shadow(0px 3px 6px #00000029);
+	position:absolute;
+	width:750px;
+	height:421.094px;
+	left:0;
+	top:642.928px;
+	overflow:visible
+	}
+	
+	#maxophlog-min {
+	filter:drop-shadow(0px 3px 6px #00000029);
+	position:absolute;
+	width:876.969px;
+	height:493.295px;
+	left:769.516px;
+	top:397.405px;
+	overflow:visible
+	}
+	
+	#noahwallp {
+	filter:drop-shadow(0px 3px 6px #00000029);
+	position:absolute;
+	width:750px;
+	height:421.094px;
+	left:0;
+	top:1102.985px;
+	overflow:visible
+	}
+	
+	#technostray_1-min {
+	filter:drop-shadow(0px 3px 6px #00000029);
+	position:absolute;
+	width:876.969px;
+	height:493.295px;
+	left:769.516px;
+	top:910.804px;
+	overflow:visible
+	}
+	
+	#spoopipfp-min {
+	filter:drop-shadow(0px 3px 6px #00000029);
+	position:absolute;
+	width:750px;
+	height:421.875px;
+	left:0;
+	top:1563.043px;
+	overflow:visible
+	}
+	
+	#illustrations {
+	left:308.283px;
+	top:0;
+	position:absolute;
+	overflow:visible;
+	width:874px;
+	height:106px;
+	text-align:center;
+	font-family:Eczar-Bold,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:80px;
+	color:#fff1c2ff
+	}
+	
+	#n_D_animation_reel {
+	left:201px;
+	top:496px;
+	position:absolute;
+	overflow:visible;
+	width:405px;
+	height:152px;
+	line-height:55px;
+	margin-top:-5px;
+	text-align:center;
+	font-family:RobotoMono-Regular,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:45px;
+	color:#fff1c2ff
+	}
+	
+	#video {
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+	position:absolute;
+	width:1067px;
+	height:600px;
+	left:701px;
+	top:272px;
+	overflow:visible
+	}
+	
+	#title {
+	position:absolute;
+	width:106px;
+	height:657px;
+	left:64px;
+	top:118px;
+	overflow:visible
+	}
+	
+	#email_br {
+	transform:translate(0px,0px) matrix(1,0,0,1,-109,168) rotate(-90deg);
+	transform-origin:center;
+	left:50px;
+	top:95px;
+	position:fixed;
+	overflow:auto;
+	width:240px;
+	white-space:nowrap;
+	text-align:left;
+	font-family:Poppins-Regular,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:13px;
+	color:#fff1c2ff;
+	letter-spacing:3.0769232177734px;
+	text-transform:uppercase
+	}
+	
+	#spoopinatural {
+	position:fixed;
+	transform:translate(0px,0px) matrix(1,0,0,1,-275.5,275.5) rotate(-90deg);
+	transform-origin:center;
+	left:75px;
+	top:93px;
+	overflow:auto;
+	width:658px;
+	height:106px;
+	text-align:center;
+	font-family:Eczar-Bold,Roboto Mono,Eczar-Bold;
+	font-style:normal;
+	font-weight:400;
+	font-size:80px;
+	color:#fff1c2ff
+	}
+
+	.rectangle-input textarea {
+		width: 100%; 
+		min-width: 850px;
+		height: 100px; 
+		padding: 1px;
+		resize: vertical; 
+		background-color: transparent;
+		color:#fff1c2ff
+	}
+
+	.rectangle-input textarea::placeholder {
+		color: #fff1c2ff; 
+		opacity: 0.4;
+	}
+
+	.rectangle-input input[type="text"],
+	.rectangle-input input[type="email"] {
+		width: 100%; 
+		min-width: 850px; 
+		height: 40px; 
+		padding: 1px; 
+		background-color: transparent; 
+		color:#fff1c2ff; 
+	}
+	
+	.rectangle-input input[type="text"]::placeholder,
+	.rectangle-input input[type="email"]::placeholder {
+		color: #fff1c2ff; 
+		opacity: 0.4; 
+	}
+
+	#button {
+		display: inline-block;
+	}
+	
+	#sendButton {
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+	}
+	
+	#sendButton svg.Rectangle rect {
+		fill: #00000000; /* Initial fill color */
+		transition: fill 0.3s ease; /* Smooth transition for fill color change */
+	}
+
+	#sendButton:hover svg.Rectangle {
+		fill: #00000080; /* Darker fill color on hover */
+		opacity: 0.45
+	}
+	
+	#sendButton div#SEND {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff1c2ff; /* Change text color as needed */
+		font-size: 24px; /* Adjust font size as needed */
+	}
