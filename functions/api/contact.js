@@ -1,64 +1,49 @@
-export async function onRequestPost(ctx) {
+const express = require('express');
+const bodyParser = require('body-parser');
+const fetch = require('node-fetch');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.post('/api/submit', async (req, res) => {
   try {
-    return await handleRequest(ctx);
-  } catch(e) {
-    return new Response(`${e.message}\n${e.stack}`, { status: 500 }); 
+    const { email, message, name } = req.body;
+
+    // Your Cloudflare API credentials
+    const authEmail = 'spoopimail@gmail.com';
+    const authKey = '2074e6d48b3fcc628a9cd978fecf9ac13a48d';
+
+    // Zone ID of your domain
+    const zoneId = 'aa800545df8868e536bdff8e3eaeb7cc';
+
+    // Create DNS record using Cloudflare API
+    const response = await fetch(`https://api.cloudflare.com/client/v4/zones/${zoneId}/dns_records`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Auth-Email': authEmail,
+        'X-Auth-Key': authKey,
+      },
+      body: JSON.stringify({
+        type: 'TXT',
+        name: `contact.${req.hostname}`, // Change to your desired subdomain
+        content: `From: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      }),
+    });
+
+    const data = await response.json();
+    console.log(data);
+
+    res.status(200).json({ success: true, message: 'Form submitted successfully!' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: 'An error occurred while processing your request.' });
   }
-}
+});
 
-async function handleRequest({ request, env }) {
-  const data = await request.formData();
-
-  // Grab the form fields
-  const name = data.get('name');
-  const message = data.get('message');
-  const captcha = data.get('h-captcha-response');
-
-  // Validate the JSON
-  if (!name || !message || !captcha) {
-    return new Response('Make sure the fields are set!', { status: 400 });
-  }
-
-  if (false) {
-    return new Response(JSON.stringify({ env, }), { status: 500 });
-  }
-
-  // Validate the captcha
-  const captchaVerified = await verifyHcaptcha(
-    captcha,
-    request.headers.get('cf-connecting-ip'),
-    env.HCAPTCHA_SECRET,
-    env.HCAPTCHA_SITE_KEY
-  );
-  if (!captchaVerified) {
-    return new Response('Invalid captcha! >:(', { status: 400 });
-  }
-
-  // Send message :)
-  await sendEmailWithSendGrid();
-
-  return new Response('Thanks for contacting me! :)');
-}
-
-// Make sure to set the "HCAPTCHA_SECRET" & "HCAPTCHA_SITE_KEY" variable
-// Refer to <> for help
-// ---
-// This function is responsible for verifying our captcha. This is used to prevent spam because spam sucks!
-async function verifyHcaptcha(response, ip, secret, siteKey) {
-  const res = await fetch('https://hcaptcha.com/siteverify', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: `response=${response}&remoteip=${ip}&secret=${secret}&sitekey=${siteKey}`
-  });
-
-  const json = await res.json();
-  console.log(json);
-  return json.success;
-}
-
-// This function will send an email through SendGrid
-async function sendEmailWithSendGrid(details) {
-  // TODO
-} 
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
