@@ -22,6 +22,46 @@
             		width: 0;
             		height: 0;
         	}
+		 #message textarea,
+        #email input,
+        #name input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #ccc; /* Add bottom border */
+            background-color: transparent; /* Transparent background */
+            color: #fff; /* Text color */
+            font-size: 16px;
+            outline: none;
+        }
+
+        #message .rectangle-input,
+        #email .rectangle-input,
+        #name .rectangle-input {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        #message .rectangle-input svg,
+        #email .rectangle-input svg,
+        #name .rectangle-input svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+        }
+
+        #message .rectangle-input span,
+        #email .rectangle-input span,
+        #name .rectangle-input span {
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+            color: #fff;
+            font-size: 14px;
+        }
     	</style>
 </head>
 
