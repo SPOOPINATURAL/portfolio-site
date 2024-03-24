@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+export async function onRequestPost(context) {
 
 app.post('/api/submit', async (req, res) => {
   try {
