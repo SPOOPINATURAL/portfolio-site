@@ -7,7 +7,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-export async function onRequestPost(context) {
 
 app.post('/api/submit', async (req, res) => {
   try {
@@ -31,7 +30,7 @@ app.post('/api/submit', async (req, res) => {
       body: JSON.stringify({
         type: 'TXT',
         name: `contact.${req.hostname}`, // Change to your desired subdomain
-        content: `From: ${name}\nEmail: ${email}\nMessage: ${message}`,
+        content: `Subject: ${name}\nEmail: ${email}\nMessage: ${message}`,
       }),
     });
 
