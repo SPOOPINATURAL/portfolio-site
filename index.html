@@ -267,23 +267,21 @@
     		var imageWidth = content.naturalWidth;
     		var imageHeight = content.naturalHeight;
     		var scaleFactor = Math.min(modalWidth / imageWidth, modalHeight / imageHeight);
-    		var newWidth = imageWidth * scaleFactor;
-    		var newHeight = imageHeight * scaleFactor;
+    		var maxWidth = modalWidth * 0.8; 
+    		var maxHeight = modalHeight * 0.8;
 
-    		// Adjust height if necessary
-    		var maxHeight = modalHeight * 0.8; // Adjust this value as needed
-    		if (newHeight > maxHeight) {
-        		var maxHeightScaleFactor = maxHeight / newHeight;
-        		newWidth *= maxHeightScaleFactor;
-        		newHeight *= maxHeightScaleFactor;
+    		if (imageWidth > maxWidth || imageHeight > maxHeight) {
+        		var widthRatio = maxWidth / imageWidth;
+        		var heightRatio = maxHeight / imageHeight;
+        		var scaleFactor = Math.min(widthRatio, heightRatio);
+        		imageWidth *= scaleFactor;
+        		imageHeight *= scaleFactor;
     		}
 
     		// Set the width and height of the content element
-    		content.style.width = newWidth + "px";
-    		content.style.height = newHeight + "px";
+    		content.style.width = imageWidth + "px";
+    		content.style.height = imageHeight + "px";
 
-    		// Center horizontally
-    		content.style.marginLeft = (modalWidth - newWidth) / 2 + "px";
 
     		// Center vertically, adjust top margin for specific modals
     		var marginTop = (modalHeight - newHeight) / 2;
