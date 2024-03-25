@@ -209,22 +209,22 @@
 			// Add click event listeners to modal triggers
 			modalTriggers.forEach(function(trigger) {
         		trigger.addEventListener("click", function() {
-					event.preventDefault();
-            		var modalContentId = this.getAttribute("href").substring(1);
-            		var modalContent = document.getElementById(modalContentId);
-					var imgId = this.querySelector("img").getAttribute("id");
-            		var modalImg = modalContent.querySelector(".modal-content");
+				event.preventDefault();
+            			var modalContentId = this.getAttribute("href").substring(1);
+            			var modalContent = document.getElementById(modalContentId);
+				var imgId = this.querySelector("img").getAttribute("id");
+            			var modalImg = modalContent.querySelector(".modal-content");
             		modalImg.src = document.getElementById(imgId).src;
             		modalContent.style.display = "block";
-        		});
-    		});
+        	});
+    	});
 
     		// Add click event listeners to close buttons
     		var closeBtns = document.querySelectorAll(".close");
     		closeBtns.forEach(function(closeBtn) {
         		closeBtn.addEventListener("click", function() {
-            		var modal = this.parentElement;
-            		modal.style.display = "none";
+            			var modal = this.parentElement;
+            			modal.style.display = "none";
         		});
     		});
 	
