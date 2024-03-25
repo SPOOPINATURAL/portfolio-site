@@ -269,6 +269,7 @@
     		var scaleFactor = Math.min(modalWidth / imageWidth, modalHeight / imageHeight);
     		var newWidth = imageWidth * scaleFactor;
     		var newHeight = imageHeight * scaleFactor;
+		var maxWidth = window.innerWidth * 0.8;
 		var maxHeight = modalHeight * 0.8; // Adjust this value as needed
     		if (newHeight > maxHeight) {
         		var maxHeightScaleFactor = maxHeight / newHeight;
@@ -281,8 +282,8 @@
     		var marginLeft = (modalWidth - newWidth) / 2;
     		content.style.marginTop = (modalHeight - newHeight) / 2 + "px";
     		content.style.marginLeft = (modalWidth - newWidth) / 2 + "px";
-		}
 		modal.scrollTop = 0;
+		}
 	</script>
 </body>
 <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
