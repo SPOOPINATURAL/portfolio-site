@@ -260,6 +260,20 @@
         		});
     		});
 	});
+	function centerModalContent(content) {
+    		var modal = content.parentElement;
+    		var modalWidth = modal.offsetWidth;
+    		var modalHeight = modal.offsetHeight;
+    		var imageWidth = content.naturalWidth;
+    		var imageHeight = content.naturalHeight;
+    		var scaleFactor = Math.min(modalWidth / imageWidth, modalHeight / imageHeight);
+    		var newWidth = imageWidth * scaleFactor;
+    		var newHeight = imageHeight * scaleFactor;
+    		content.style.width = newWidth + "px";
+    		content.style.height = newHeight + "px";
+    		content.style.marginTop = (modalHeight - newHeight) / 2 + "px";
+    		content.style.marginLeft = (modalWidth - newWidth) / 2 + "px";
+		}
 	</script>
 </body>
 <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
