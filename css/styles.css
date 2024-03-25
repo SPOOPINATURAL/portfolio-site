@@ -753,6 +753,7 @@
 	align-items: center; /* Center vertically */
 	width: 100%; /* Ensure the modal content spans the entire width of the modal */
 	height: 100%; /* Ensure the modal content spans the entire height of the modal */
+	overflow: hidden;
 }
 
 .modal-content img {
