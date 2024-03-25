@@ -401,6 +401,10 @@
 	top:.108px;
 	transform:matrix(1,0,0,1,0,0)
 	}
+
+	.social-instagram_-_simple-line:hover {
+    		opacity: 0.8; /* Adjust the opacity as needed */
+	}
 	
 	#YouTube-Icon-White-Logowine {
 	fill:#fff1c2ff
@@ -415,6 +419,10 @@
 	top:.107px;
 	transform:matrix(1,0,0,1,0,0)
 	}
+
+	.YouTube-Icon-White-Logowine:hover {
+    		opacity: 0.8; /* Adjust the opacity as needed */
+	}
 	
 	#tumblr-white-icon {
 	fill:#fff1c2ff
@@ -428,6 +436,10 @@
 	left:133.788px;
 	top:0;
 	transform:matrix(1,0,0,1,0,0)
+	}
+
+	.tumblr-white-icon:hover {
+    		opacity: 0.8; /* Adjust the opacity as needed */
 	}
 	
 	#mordecaihsu {
