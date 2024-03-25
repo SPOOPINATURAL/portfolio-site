@@ -287,11 +287,8 @@
 
     		// Center vertically, adjust top margin for specific modals
     		var marginTop = (modalHeight - newHeight) / 2;
-    		if (modal.id === 'myModal2' || modal.id === 'myModal3') {
-        		marginTop *= 0.5; // Adjust this value as needed
-    		}
-    		content.style.marginTop = marginTop + "px";
 		var marginLeft = (modalWidth - newWidth) / 2;
+		content.style.marginTop = marginTop + "px";
     		content.style.marginLeft = marginLeft + "px";
 
     		// Scroll to top of modal
