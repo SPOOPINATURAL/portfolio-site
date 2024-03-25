@@ -399,7 +399,8 @@
 	height:41px;
 	left:231.424px;
 	top:.108px;
-	transform:matrix(1,0,0,1,0,0)
+	transform:matrix(1,0,0,1,0,0);
+	transition: opacity 0.3s ease;
 	}
 
 	.social-instagram_-_simple-line:hover {
@@ -417,7 +418,8 @@
 	height:40.836px;
 	left:0;
 	top:.107px;
-	transform:matrix(1,0,0,1,0,0)
+	transform:matrix(1,0,0,1,0,0);
+	transition: opacity 0.3s ease;
 	}
 
 	.YouTube-Icon-White-Logowine:hover {
@@ -435,7 +437,8 @@
 	height:40.943px;
 	left:133.788px;
 	top:0;
-	transform:matrix(1,0,0,1,0,0)
+	transform:matrix(1,0,0,1,0,0);
+	transition: opacity 0.3s ease;
 	}
 
 	.tumblr-white-icon:hover {
