@@ -748,11 +748,17 @@
 }
 /* Modal Content (image) */
 .modal-content {
-position: relative;
-margin: auto;
-display: block;
-width: 80%;
-max-width: 1900px;
+	display: flex; /* Use flexbox */
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+	width: 100%; /* Ensure the modal content spans the entire width of the modal */
+	height: 100%; /* Ensure the modal content spans the entire height of the modal */
+}
+
+.modal-content img {
+	max-width: 100%; /* Ensure the image fits within the modal */
+	max-height: 100%; /* Ensure the image fits within the modal */
+	object-fit: contain; /* Maintain aspect ratio while fitting within the container */
 }
   
   /* Add Animation */
