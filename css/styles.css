@@ -481,8 +481,12 @@
 	height:422px;
 	left:0;
 	top:181.964px;
-	overflow:visible
+	overflow:visible;
+	cursor: pointer;
+  	transition: 0.3s;
 	}
+
+
 	
 	#ethanbg1 {
 	filter:drop-shadow(0px 3px 6px #00000029);
@@ -491,7 +495,9 @@
 	height:202.291px;
 	left:769.516px;
 	top:181.964px;
-	overflow:visible
+	overflow:visible;
+	cursor: pointer;
+  	transition: 0.3s;
 	}
 	
 	#kritzposter {
@@ -501,7 +507,9 @@
 	height:569.395px;
 	left:769.516px;
 	top:1425.75px;
-	overflow:visible
+	overflow:visible;
+	cursor: pointer;
+  	transition: 0.3s;
 	}
 	
 	#theoryqf {
@@ -511,7 +519,9 @@
 	height:616.11px;
 	left:1176px;
 	top:1425.75px;
-	overflow:visible
+	overflow:visible;
+	cursor: pointer;
+  	transition: 0.3s;
 	}
 	
 	#osiantranches {
@@ -521,7 +531,9 @@
 	height:421.094px;
 	left:0;
 	top:642.928px;
-	overflow:visible
+	overflow:visible;
+	cursor: pointer;
+  	transition: 0.3s;
 	}
 	
 	#maxophlog-min {
@@ -531,7 +543,9 @@
 	height:493.295px;
 	left:769.516px;
 	top:397.405px;
-	overflow:visible
+	overflow:visible;
+	cursor: pointer;
+  	transition: 0.3s;
 	}
 	
 	#noahwallp {
@@ -541,7 +555,9 @@
 	height:421.094px;
 	left:0;
 	top:1102.985px;
-	overflow:visible
+	overflow:visible;
+	cursor: pointer;
+  	transition: 0.3s;
 	}
 	
 	#technostray_1-min {
@@ -551,7 +567,9 @@
 	height:493.295px;
 	left:769.516px;
 	top:910.804px;
-	overflow:visible
+	overflow:visible;
+	cursor: pointer;
+  	transition: 0.3s;
 	}
 	
 	#spoopipfp-min {
@@ -561,7 +579,9 @@
 	height:421.875px;
 	left:0;
 	top:1563.043px;
-	overflow:visible
+	overflow:visible;
+	cursor: pointer;
+  	transition: 0.3s;
 	}
 	
 	#illustrations {
