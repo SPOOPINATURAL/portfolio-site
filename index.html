@@ -271,6 +271,8 @@
     		var newHeight = imageHeight * scaleFactor;
     		content.style.width = newWidth + "px";
     		content.style.height = newHeight + "px";
+		var marginTop = (modalHeight - newHeight) / 2;
+    		var marginLeft = (modalWidth - newWidth) / 2;
     		content.style.marginTop = (modalHeight - newHeight) / 2 + "px";
     		content.style.marginLeft = (modalWidth - newWidth) / 2 + "px";
 		}
