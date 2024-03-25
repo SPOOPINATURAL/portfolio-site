@@ -29,7 +29,7 @@
 	height:5912px;
 	font-family:Roboto Mono,Eczar-Bold;
 	background-color:#3d050cff;
-	overflow-y:scroll;
+	overflow:hidden;
 	--web-view-name:web;
 	--web-view-id:web;
 	--web-scale-to-fit:true;
@@ -748,11 +748,12 @@
 }
 /* Modal Content (image) */
 .modal-content {
+position: relative;
 margin: auto;
 display: block;
 width: 80%;
 max-width: 1900px;
-  }
+}
   
   /* Add Animation */
   .modal-content, #caption {  
@@ -781,6 +782,7 @@ max-width: 1900px;
 	font-size: 40px;
 	font-weight: bold;
 	transition: 0.3s;
+	z-index: 99999;
   }
   
   .close:hover,
