@@ -280,6 +280,10 @@
     		content.style.height = newHeight + "px";
 		var marginTop = (modalHeight - newHeight) / 2;
     		var marginLeft = (modalWidth - newWidth) / 2;
+		if (modal.id === 'myModal2' || modal.id === 'myModal3') {
+        		marginTop *= 0.5; // Adjust this value as needed
+    		}
+		content.style.width = "auto";
     		content.style.marginTop = (modalHeight - newHeight) / 2 + "px";
     		content.style.marginLeft = (modalWidth - newWidth) / 2 + "px";
 		modal.scrollTop = 0;
