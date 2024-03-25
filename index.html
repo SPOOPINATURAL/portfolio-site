@@ -262,32 +262,38 @@
 	});
 	function centerModalContent(content) {
     		var modal = content.parentElement;
-    		var modalWidth = modal.clientWidth;
+   		var modalWidth = modal.clientWidth;
     		var modalHeight = modal.clientHeight;
     		var imageWidth = content.naturalWidth;
     		var imageHeight = content.naturalHeight;
     		var scaleFactor = Math.min(modalWidth / imageWidth, modalHeight / imageHeight);
     		var newWidth = imageWidth * scaleFactor;
     		var newHeight = imageHeight * scaleFactor;
-		var maxWidth = window.innerWidth * 0.8;
-		var maxHeight = modalHeight * 0.8; // Adjust this value as needed
+
+    		// Adjust height if necessary
+    		var maxHeight = modalHeight * 0.8; // Adjust this value as needed
     		if (newHeight > maxHeight) {
         		var maxHeightScaleFactor = maxHeight / newHeight;
         		newWidth *= maxHeightScaleFactor;
         		newHeight *= maxHeightScaleFactor;
     		}
+
+    		// Set the width and height of the content element
     		content.style.width = newWidth + "px";
     		content.style.height = newHeight + "px";
-		var marginTop = (modalHeight - newHeight) / 2;
-    		var marginLeft = (modalWidth - newWidth) / 2;
-		var screenHeight = window.innerHeight;
-		if (modal.id === 'myModal2' || modal.id === 'myModal3') {
+
+    		// Center horizontally
+    		content.style.marginLeft = (modalWidth - newWidth) / 2 + "px";
+
+    		// Center vertically, adjust top margin for specific modals
+    		var marginTop = (modalHeight - newHeight) / 2;
+    		if (modal.id === 'myModal2' || modal.id === 'myModal3') {
         		marginTop *= 0.5; // Adjust this value as needed
     		}
-		content.style.width = "auto";
-    		content.style.marginTop = (modalHeight - newHeight) / 2 + "px";
-    		content.style.marginLeft = (modalWidth - newWidth) / 2 + "px";
-		modal.scrollTop = 0;
+    		content.style.marginTop = marginTop + "px";
+
+    		// Scroll to top of modal
+   		 modal.scrollTop = 0;
 		}
 	</script>
 </body>
