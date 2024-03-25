@@ -760,6 +760,9 @@
 	max-width: 100%; /* Ensure the image fits within the modal */
 	max-height: 100%; /* Ensure the image fits within the modal */
 	object-fit: contain; /* Maintain aspect ratio while fitting within the container */
+	justify-content: conter;
+	align-items: center;
+	overflow: hidden;
 }
 
 #myModal3 .modal-content,
