@@ -262,8 +262,8 @@
 	});
 	function centerModalContent(content) {
     		var modal = content.parentElement;
-    		var modalWidth = modal.offsetWidth;
-    		var modalHeight = modal.offsetHeight;
+    		var modalWidth = modal.clientWidth;
+    		var modalHeight = modal.clientHeight;
     		var imageWidth = content.naturalWidth;
     		var imageHeight = content.naturalHeight;
     		var scaleFactor = Math.min(modalWidth / imageWidth, modalHeight / imageHeight);
