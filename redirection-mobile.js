@@ -99,7 +99,7 @@ SA.redirection_mobile = function(configuration) {
 		isUATablet = false;
 
 		// Check if the UA is a mobile one (regexp from http://detectmobilebrowsers.com/ (WURFL))
-		if (/(android|bb\d+|meego|iphone|ipod|iemobile|opera mini)/i.test(agent))
+		if (/(android|bb\d+|meego|iphone|ipod|iemobile|opera mini|chrome)/i.test(agent))
 			isUAMobile = true;
 		}	
 
