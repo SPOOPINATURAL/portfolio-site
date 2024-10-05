@@ -76,6 +76,17 @@
 <body>
 	<div id="web"> 
 		<img id="spoopibg" src="spoopibg.png" srcset="spoopibg.png 1x, spoopibg@2x.png 2x">
+		<script>
+			// Prevent right-click context menu
+			document.getElementById('spoopibg').addEventListener('contextmenu', function(e) {
+				e.preventDefault();
+			});
+	
+			// Prevent dragging
+			document.getElementById('spoopibg').addEventListener('dragstart', function(e) {
+				e.preventDefault();
+			});
+		</script>
 		<div id="contact">
 			<div id="form" class="form">
 				<form action="https://formspree.io/f/mkndvlgn" method="POST">
