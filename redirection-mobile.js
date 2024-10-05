@@ -170,4 +170,4 @@ SA.redirection_mobile = function(configuration) {
 		}
 		
 	} 
-};	
+;	
