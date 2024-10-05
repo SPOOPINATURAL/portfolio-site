@@ -26,6 +26,7 @@
 	
 	body {
         background-color: var(--main-bg-color);
+		background-size:cover;
     	display: flex;
     	justify-content: center;
     	align-items: center;
@@ -712,7 +713,8 @@
 		padding: 1px;
 		resize: vertical; 
 		background-color: transparent;
-		color:#fff1c2ff
+		color:#fff1c2ff;
+		resize: none;
 	}
 
 	.rectangle-input textarea::placeholder {
