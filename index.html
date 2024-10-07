@@ -79,28 +79,6 @@
 <body>
 	<div id="web"> 
 		<img id="spoopibg" src="images/spoopibg.png" srcset="images/spoopibg.png 1x, images/spoopibg@2x.png 2x">
-		<script>
-			// Prevent right-click context menu
-			document.getElementById('spoopibg').addEventListener('contextmenu', function(e) {
-				e.stopPropagation();
-				e.preventDefault();
-				// Trigger the normal context menu
-				setTimeout(() => {
-           		 const evt = new MouseEvent('contextmenu', {
-                		bubbles: true,
-                		cancelable: true,
-                		clientX: e.clientX,
-                		clientY: e.clientY,
-           		 });
-            		document.dispatchEvent(evt);
-        		}, 0); // Slight delay to ensure proper event handling
-			});
-	
-			// Prevent dragging
-			document.getElementById('spoopibg').addEventListener('dragstart', function(e) {
-				e.preventDefault();
-			});
-		</script>
 		<div id="contact">
 			<div id="form" class="form">
 				<form action="https://formspree.io/f/mkndvlgn" method="POST">
@@ -161,28 +139,6 @@
 			</div>
 			<div id="mordecaihsu"> <span>MORDECAI HSU | 2D ANIMATOR | ILLUSTRATOR</span> </div>
 			<div id="spoopilogowhite" class="spoopilogowhite"> <img id="spoopilogowhite_bc" src="images/spoopilogowhite_bc.png" srcset="images/spoopilogowhite_bc.png 1x, images/spoopilogowhite_bc@2x.png 2x">
-				<script>
-					// Prevent right-click context menu
-					document.getElementById('spoopilogowhite').addEventListener('contextmenu', function(e) {
-						e.stopPropagation();
-						e.preventDefault();
-						// Trigger the normal context menu
-						setTimeout(() => {
-							const evt = new MouseEvent('contextmenu', {
-								bubbles: true,
-								cancelable: true,
-								clientX: e.clientX,
-								clientY: e.clientY,
-							});
-							document.dispatchEvent(evt);
-						}, 0); // Slight delay to ensure proper event handling
-					});
-			
-					// Prevent dragging
-					document.getElementById('spoopilogowhite').addEventListener('dragstart', function(e) {
-						e.preventDefault();
-					});
-				</script>
 			</div>
 		</div>
 		<div id="gallery">
@@ -278,6 +234,62 @@
 			<div id="spoopinatural"> <span>SPOOPINATURAL</span></div>
 		</div>
 	</div>
+	
+</body>
+<div class="kofi-widget" id="kofiWidgetOverlay"></div>
+	<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+	<script>
+  	kofiWidgetOverlay.draw('spoopinatural', {
+    	'type': 'floating-chat',
+    	'floating-chat.donateButton.text': 'Support me',
+    	'floating-chat.donateButton.background-color': '#d9534f',
+    	'floating-chat.donateButton.text-color': '#fff'
+  	});
+	</script>
+	<script>
+		// Prevent right-click context menu
+		document.getElementById('spoopibg').addEventListener('contextmenu', function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			// Trigger the normal context menu
+			setTimeout(() => {
+				const evt = new MouseEvent('contextmenu', {
+					bubbles: true,
+					cancelable: true,
+					clientX: e.clientX,
+					clientY: e.clientY,
+				});
+				document.dispatchEvent(evt);
+			}, 0); // Slight delay to ensure proper event handling
+		});
+
+		// Prevent dragging
+		document.getElementById('spoopibg').addEventListener('dragstart', function(e) {
+			e.preventDefault();
+		});
+	</script>
+	<script>
+		// Prevent right-click context menu
+		document.getElementById('spoopilogowhite').addEventListener('contextmenu', function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			// Trigger the normal context menu
+			setTimeout(() => {
+				const evt = new MouseEvent('contextmenu', {
+					bubbles: true,
+					cancelable: true,
+					clientX: e.clientX,
+					clientY: e.clientY,
+				});
+				document.dispatchEvent(evt);
+			}, 0); // Slight delay to ensure proper event handling
+		});
+
+		// Prevent dragging
+		document.getElementById('spoopilogowhite').addEventListener('dragstart', function(e) {
+			e.preventDefault();
+		});
+	</script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
     			var modalTriggers = document.querySelectorAll(".modal-trigger");
@@ -371,17 +383,6 @@
             document.body.classList.remove('modal-open');
         });
     });
-	</script>
-</body>
-<div class="kofi-widget" id="kofiWidgetOverlay"></div>
-	<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-	<script>
-  	kofiWidgetOverlay.draw('spoopinatural', {
-    	'type': 'floating-chat',
-    	'floating-chat.donateButton.text': 'Support me',
-    	'floating-chat.donateButton.background-color': '#d9534f',
-    	'floating-chat.donateButton.text-color': '#fff'
-  	});
 	</script>
 
 </html>
