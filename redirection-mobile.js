@@ -15,9 +15,13 @@
 */
 	
 /*globals window,document, navigator, SA */
-if (!window.SA) {window.SA = {};}
+if (!window.SA) {
+	window.SA = {};
+}
 
 SA.redirection_mobile = function(configuration) {
+
+	var config = configuration || {};
 
 	if (config.beforeredirection_callback && !config.beforeredirection_callback.call(this)) {
 		return;
