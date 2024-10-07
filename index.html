@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 	<meta charset="utf-8" />
@@ -79,47 +79,59 @@
 <body>
 	<div id="web"> 
 		<img id="spoopibg" src="images/spoopibg.png" srcset="images/spoopibg.png 1x, images/spoopibg@2x.png 2x">
+		<script>
+			// Prevent right-click context menu
+			document.getElementById('spoopibg').addEventListener('contextmenu', function(e) {
+				e.stopPropagation();
+				e.preventDefault();
+				// Trigger the normal context menu
+				setTimeout(() => {
+           		 const evt = new MouseEvent('contextmenu', {
+                		bubbles: true,
+                		cancelable: true,
+                		clientX: e.clientX,
+                		clientY: e.clientY,
+           		 });
+            		document.dispatchEvent(evt);
+        		}, 0); // Slight delay to ensure proper event handling
+			});
+	
+			// Prevent dragging
+			document.getElementById('spoopibg').addEventListener('dragstart', function(e) {
+				e.preventDefault();
+			});
+		</script>
 		<div id="contact">
 			<div id="form" class="form">
 				<form action="https://formspree.io/f/mkndvlgn" method="POST">
 					<div id="button">
 						<button type="submit" id="sendButton">
-							<svg class="Rectangle">
-								<rect id="Rectangle" rx="0" ry="0" x="0" y="0" width="198" height="71"></rect>
-							</svg>
-							<div id="SEND"><span>SEND</span></div>
+						<svg class="Rectangle">
+							<rect id="Rectangle" rx="0" ry="0" x="0" y="0" width="198" height="71"> </rect>
+						</svg>
+						<div id="SEND"> <span>SEND</span> </div>
 						</button>
 					</div>
-				
 					<div id="message" class="rectangle-input">
 						<svg class="Rectangle_o">
-							<rect id="Rectangle_o" rx="0" ry="0" x="0" y="0" width="850" height="1"></rect>
+							<rect id="Rectangle_o" rx="0" ry="0" x="0" y="0" width="850" height="1"> </rect>
 						</svg>
-						<label for="Your_Message">
-							<textarea id="Your_Message" name="message" placeholder="Your Message" required autocomplete="off"></textarea>
-							<div id="MESSAGE_q"><span>MESSAGE</span></div>
-						</label>
+						<textarea id="Your_Message" name="message" placeholder="Your Message" required autocomplete="off"></textarea>
+						<div id="MESSAGE_q"> <span>MESSAGE</span> </div>
 					</div>
-				
 					<div id="email" class="rectangle-input">
 						<svg class="Rectangle_s">
-							<rect id="Rectangle_s" rx="0" ry="0" x="0" y="0" width="850" height="1"></rect>
+							<rect id="Rectangle_s" rx="0" ry="0" x="0" y="0" width="850" height="1"> </rect>
 						</svg>
-						<label for="Your_Email">
-							<input name="email" id="Your_Email" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off">
-							<div id="EMAIL_u"><span>EMAIL</span></div>
-						</label>
+						<input name="email" id="Your_Email" name="email" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off">
+						<div id="EMAIL_u"> <span>EMAIL</span> </div>
 					</div>
-				
 					<div id="name" class="rectangle-input">
 						<svg class="Rectangle_w" viewBox="0 0 850 1.229">
-							<path id="Rectangle_w" d="M 0 0 L 850 0 L 850 1.228591322898865 L 0 1.228591322898865 L 0 0 Z"></path>
+							<path id="Rectangle_w" d="M 0 0 L 850 0 L 850 1.228591322898865 L 0 1.228591322898865 L 0 0 Z"> </path>
 						</svg>
-						<label for="Your_Name">
-							<input name="name" id="Your_Name" placeholder="Subject" required autocomplete="off">
-							<div id="NAME_y"><span>SUBJECT</span></div>
-						</label>
-					</div>
+						<input name="text" id="Your_Name" name="name" placeholder="Subject" required autocomplete="off">
+						<div id="NAME_y"> <span>SUBJECT</span> </div>
 				</form>
 			</div>
 			</div> 
@@ -149,6 +161,28 @@
 			</div>
 			<div id="mordecaihsu"> <span>MORDECAI HSU | 2D ANIMATOR | ILLUSTRATOR</span> </div>
 			<div id="spoopilogowhite" class="spoopilogowhite"> <img id="spoopilogowhite_bc" src="images/spoopilogowhite_bc.png" srcset="images/spoopilogowhite_bc.png 1x, images/spoopilogowhite_bc@2x.png 2x">
+				<script>
+					// Prevent right-click context menu
+					document.getElementById('spoopilogowhite').addEventListener('contextmenu', function(e) {
+						e.stopPropagation();
+						e.preventDefault();
+						// Trigger the normal context menu
+						setTimeout(() => {
+							const evt = new MouseEvent('contextmenu', {
+								bubbles: true,
+								cancelable: true,
+								clientX: e.clientX,
+								clientY: e.clientY,
+							});
+							document.dispatchEvent(evt);
+						}, 0); // Slight delay to ensure proper event handling
+					});
+			
+					// Prevent dragging
+					document.getElementById('spoopilogowhite').addEventListener('dragstart', function(e) {
+						e.preventDefault();
+					});
+				</script>
 			</div>
 		</div>
 		<div id="gallery">
@@ -244,7 +278,6 @@
 			<div id="spoopinatural"> <span>SPOOPINATURAL</span></div>
 		</div>
 	</div>
-</body>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
     			var modalTriggers = document.querySelectorAll(".modal-trigger");
@@ -339,6 +372,7 @@
         });
     });
 	</script>
+</body>
 <div class="kofi-widget" id="kofiWidgetOverlay"></div>
 	<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
 	<script>
@@ -348,50 +382,6 @@
     	'floating-chat.donateButton.background-color': '#d9534f',
     	'floating-chat.donateButton.text-color': '#fff'
   	});
-	</script>
-	<script>
-		// Prevent right-click context menu
-		document.getElementById('spoopibg').addEventListener('contextmenu', function(e) {
-			e.stopPropagation();
-			e.preventDefault();
-			// Trigger the normal context menu
-			setTimeout(() => {
-				const evt = new MouseEvent('contextmenu', {
-					bubbles: true,
-					cancelable: true,
-					clientX: e.clientX,
-					clientY: e.clientY,
-				});
-				document.dispatchEvent(evt);
-			}, 0); // Slight delay to ensure proper event handling
-		});
-
-		// Prevent dragging
-		document.getElementById('spoopibg').addEventListener('dragstart', function(e) {
-			e.preventDefault();
-		});
-	</script>
-	<script>
-		// Prevent right-click context menu
-		document.getElementById('spoopilogowhite').addEventListener('contextmenu', function(e) {
-			e.stopPropagation();
-			e.preventDefault();
-			// Trigger the normal context menu
-			setTimeout(() => {
-				const evt = new MouseEvent('contextmenu', {
-					bubbles: true,
-					cancelable: true,
-					clientX: e.clientX,
-					clientY: e.clientY,
-				});
-				document.dispatchEvent(evt);
-			}, 0); // Slight delay to ensure proper event handling
-		});
-
-		// Prevent dragging
-		document.getElementById('spoopilogowhite').addEventListener('dragstart', function(e) {
-			e.preventDefault();
-		});
 	</script>
 
 </html>

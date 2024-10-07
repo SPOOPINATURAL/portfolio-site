@@ -91,6 +91,7 @@
 	height:922.667px;
 	left:231px;
 	top:4824.333px;
+	overflow:visible
 	}
 	
 	#form {
@@ -99,6 +100,7 @@
 	height:721px;
 	left:769px;
 	top:154.667px;
+	overflow:visible
 	}
 	
 	#button {
@@ -107,6 +109,7 @@
 	height:71px;
 	left:0;
 	top:650px;
+	overflow:visible
 	}
 	
 	#Rectangle {
@@ -121,6 +124,7 @@
 	
 	.Rectangle {
 	position:relative;
+	overflow:visible;
 	width:198px;
 	height:71px;
 	left:0;
@@ -131,6 +135,7 @@
 	left:62px;
 	top:17px;
 	position:absolute;
+	overflow:visible;
 	width:75px;
 	white-space:nowrap;
 	text-align:center;
@@ -149,6 +154,7 @@
 	height:199px;
 	left:0;
 	top:415px;
+	overflow:visible
 	}
 	
 	#Rectangle_o {
@@ -163,6 +169,7 @@
 	
 	.Rectangle_o {
 	position:absolute;
+	overflow:visible;
 	width:851px;
 	height:2px;
 	left:0;
@@ -174,6 +181,7 @@
 	left:0;
 	top:59px;
 	position:absolute;
+	overflow:visible;
 	width:160px;
 	white-space:nowrap;
 	text-align:left;
@@ -188,6 +196,7 @@
 	left:0;
 	top:0;
 	position:absolute;
+	overflow:visible;
 	width:109px;
 	white-space:nowrap;
 	text-align:left;
@@ -205,6 +214,7 @@
 	height:134px;
 	left:0;
 	top:194px;
+	overflow:visible
 	}
 	
 	#Rectangle_s {
@@ -219,6 +229,7 @@
 	
 	.Rectangle_s {
 	position:absolute;
+	overflow:visible;
 	width:851px;
 	height:2px;
 	left:0;
@@ -230,6 +241,7 @@
 	left:0;
 	top:62px;
 	position:absolute;
+	overflow:visible;
 	width:116px;
 	white-space:nowrap;
 	text-align:left;
@@ -244,6 +256,7 @@
 	left:0;
 	top:0;
 	position:absolute;
+	overflow:visible;
 	width:68px;
 	white-space:nowrap;
 	text-align:left;
@@ -261,6 +274,7 @@
 	height:120.402px;
 	left:0;
 	top:0;
+	overflow:visible
 	}
 	
 	#Rectangle_w {
@@ -274,6 +288,7 @@
 	}
 	
 	.Rectangle_w {
+	overflow:visible;
 	position:absolute;
 	width:851px;
 	height:2.229px;
@@ -287,6 +302,7 @@
 	left:0;
 	top:47px;
 	position:absolute;
+	overflow:visible;
 	width:89px;
 	white-space:nowrap;
 	text-align:left;
@@ -314,18 +330,18 @@
 	}
 	
 	#gunterroses {
-	position:relative;
+	position:absolute;
 	width:729px;
 	height:730px;
-	left:-430px;
-	top:4050px;
+	left:0;
+	top:192.667px;
 	overflow:visible
 	}
 	
 	#contact_ {
-	left:0px;
-	top:54%;
-	position:relative;
+	left:257.384px;
+	top:0;
+	position:absolute;
 	overflow:visible;
 	width:966px;
 	height:106px;
