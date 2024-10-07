@@ -29,7 +29,10 @@ SA.redirection_mobile = function(configuration) {
 	// Helper function for getting a value from a parameter in the querystring of a URL
 	var getQueryValue = function(param) {
 
-		if (!param) {
+		const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+
+		/*if (!param) {
 			return;
 		}
 
@@ -43,7 +46,7 @@ SA.redirection_mobile = function(configuration) {
 				firstPart = token && token.substring(0, token.indexOf("="));
 			if (firstPart === param ) {
 				return token.substring(token.indexOf("=") + 1, token.length);
-			}
+			}*/
 		}
 
 	};
@@ -76,11 +79,11 @@ SA.redirection_mobile = function(configuration) {
 		queryValue = getQueryValue(redirection_param),
 
 		// Compose the mobile hostname considering "mobile_url" or "mobile_prefix" + hostname
-		mobile_host = mobile_url ||
-			(mobile_prefix + "." + 
+		mobile_host = mobile_url || (mobile_prefix + "." + (host.startsWith("www.") ? host.substring(4) : host)),
+			/*(mobile_prefix + "." + 
 				(!!host.match(/^www\./i) ?
 					host.substring(4) : 
-						host)),
+						host)),*/
 
 		// Expiry hours for cookie
 		cookie_hours = config.cookie_hours || 1,
@@ -99,14 +102,14 @@ SA.redirection_mobile = function(configuration) {
 		isUATablet = false;
 
 		// Check if the UA is a mobile one (regexp from http://detectmobilebrowsers.com/ (WURFL))
-		if (/(android|bb\d+|meego|iphone|ipod|iemobile|opera mini|chrome|instagram|FBAV|FBAN|firefox|duckduckgo|discord|safari|edge|edga|opera mobi|samsungbrowser|vivaldi|ucbrowser|brave|puffin|miuibrowser|yabrowser|gsa|google)/i.test(agent))
+		if (/(android|bb\d+|meego|iphone|ipod|iemobile|opera mini|chrome|instagram|FBAV|FBAN|firefox|duckduckgo|discord|safari|edge|edga|opera mobi|samsungbrowser|vivaldi|ucbrowser|brave|puffin|miuibrowser|yabrowser|gsa|google|reddit|rvb)/i.test(agent))
 			isUAMobile = true;
-		}	
+			
 
 	// Check if the referrer was a mobile page (probably the user clicked "Go to full site") or in the 
 	// querystring there is a parameter to avoid the redirection such as "?noredireciton=true"
 	// (in that case we need to set a variable in the sessionStorage or in the cookie)
-	if (document.referrer.indexOf(mobile_host) >= 0 || queryValue === FALSE ) {
+	if (document.referrer.includes(mobile_host) || queryValue === FALSE) {
 
 		if (window.sessionStorage) {
 			window.sessionStorage.setItem(redirection_param, FALSE);
@@ -117,17 +120,19 @@ SA.redirection_mobile = function(configuration) {
 	}
 
 	// Check if the sessionStorage contain the parameter
-	var isSessionStorage = (window.sessionStorage) ? 
+	var isSessionStorage = window.sessionStorage && window.sessionStorage.getItem(redirection_param) === FALSE;
+	/*var isSessionStorage = (window.sessionStorage) ? 
 			(window.sessionStorage.getItem(redirection_param) === FALSE) :
-				false,
+				false,*/
 
 		// Check if the Cookie has been set up
-		isCookieSet = document.cookie ? 
+		var isCookieSet = document.cookie && document.cookie.includes(redirection_param);
+		/*isCookieSet = document.cookie ? 
 			(document.cookie.indexOf(redirection_param) >= 0) :
-				false;
+				false;*/
 
 	// Check if the device is a Tablet such as iPad, Samsung Tab, Motorola Xoom or Amazon Kindle
-	if (!!(agent.match(/(iPad|SCH-I|xoom|NOOK|silk|kindle|GT-P|touchpad|kindle|sch-t|viewpad|bolt|playbook|Nexus 7)/i))) {
+	if (/ipad|nexus 7|sch-i|xoom|NOOK|silk|kindle|gt-p|touchpad/i.test(agent)) {
 		
 		// Check if the redirection needs to happen for tablets
 		isUATablet = (config.tablet_redirection === TRUE || !!config.tablet_host) ? true : false;
@@ -138,11 +143,14 @@ SA.redirection_mobile = function(configuration) {
 	if ((isUATablet || isUAMobile) && !(isCookieSet || isSessionStorage)) {
 
 		// Callback call
-		if (config.beforeredirection_callback) {
+		if (config.beforeredirection_callback && !config.beforeredirection_callback.call(this)) {
+            return;
+        }
+		/*if (config.beforeredirection_callback) {
 			if (!config.beforeredirection_callback.call(this)) {
 				return;
 			}
-		}
+		}*/
 		
 		var path_query = "";
 		
@@ -155,19 +163,14 @@ SA.redirection_mobile = function(configuration) {
 		}
 		
 		if (append_referrer && document.referrer) {
-			if (path_query.indexOf('?') === -1) {
-				path_query += "?";
-			} else {
-				path_query += "&";
-			}
-			path_query += append_referrer_key + "=" + encodeURIComponent(document.referrer);
+			path_query += (path_query.includes('?') ? "&" : "?") + 
+                append_referrer_key + "=" + encodeURIComponent(document.referrer);
 		}
 		
 		if (isUATablet){
-			document.location.href = mobile_protocol + "//" + tablet_host + path_query;
+			window.location.replace(mobile_protocol + "//" + tablet_host + path_query);
 		} else if (isUAMobile) {
-			document.location.href = mobile_protocol + "//" + mobile_host + path_query;
+			window.location.replace(mobile_protocol + "//" + mobile_host + path_query);
 		}
-		
 	} 
 ;	
