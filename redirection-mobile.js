@@ -53,6 +53,7 @@ SA.redirection_mobile = function(configuration) {
 				
 	// Retrieve the User Agent of the browser
 	var agent = navigator.userAgent.toLowerCase(),
+		console.log("User Agent: ", agent);
 		FALSE = "false",
 		TRUE = "true",
 
@@ -102,9 +103,10 @@ SA.redirection_mobile = function(configuration) {
 		isUATablet = false;
 
 		// Check if the UA is a mobile one (regexp from http://detectmobilebrowsers.com/ (WURFL))
-		if (/(android|bb\d+|meego|iphone|ipod|iemobile|opera mini|chrome|instagram|FBAV|FBAN|firefox|duckduckgo|discord|safari|edge|edga|opera mobi|samsungbrowser|vivaldi|ucbrowser|brave|puffin|miuibrowser|yabrowser|gsa|google|reddit|rvb)/i.test(agent))
+		if (/(android|bb\d+|meego|iphone|ipod|iemobile|opera mini|chrome|instagram|FBAV|FBAN|firefox|duckduckgo|discord|safari|edge|edga|opera mobi|samsungbrowser|vivaldi|ucbrowser|brave|puffin|miuibrowser|yabrowser|gsa|google|reddit|rvb)/i.test(agent)){
+			console.log("Mobile WebView or browser detected");
 			isUAMobile = true;
-			
+		}
 
 	// Check if the referrer was a mobile page (probably the user clicked "Go to full site") or in the 
 	// querystring there is a parameter to avoid the redirection such as "?noredireciton=true"
@@ -170,7 +172,8 @@ SA.redirection_mobile = function(configuration) {
 		if (isUATablet){
 			window.location.replace(mobile_protocol + "//" + tablet_host + path_query);
 		} else if (isUAMobile) {
-			window.location.replace(mobile_protocol + "//" + mobile_host + path_query);
+			console.log("Redirecting to mobile site for Chrome or any mobile browser...");
+			window.location.replace(mobile_protocol + "//" + mobile_host + window.location.pathname);
 		}
 	} 
 ;	
