@@ -91,7 +91,6 @@
 	height:922.667px;
 	left:231px;
 	top:4824.333px;
-	overflow:visible
 	}
 	
 	#form {
@@ -100,7 +99,6 @@
 	height:721px;
 	left:769px;
 	top:154.667px;
-	overflow:visible
 	}
 	
 	#button {
@@ -109,7 +107,6 @@
 	height:71px;
 	left:0;
 	top:650px;
-	overflow:visible
 	}
 	
 	#Rectangle {
@@ -124,7 +121,6 @@
 	
 	.Rectangle {
 	position:relative;
-	overflow:visible;
 	width:198px;
 	height:71px;
 	left:0;
@@ -135,7 +131,6 @@
 	left:62px;
 	top:17px;
 	position:absolute;
-	overflow:visible;
 	width:75px;
 	white-space:nowrap;
 	text-align:center;
@@ -154,7 +149,6 @@
 	height:199px;
 	left:0;
 	top:415px;
-	overflow:visible
 	}
 	
 	#Rectangle_o {
@@ -169,7 +163,6 @@
 	
 	.Rectangle_o {
 	position:absolute;
-	overflow:visible;
 	width:851px;
 	height:2px;
 	left:0;
@@ -181,7 +174,6 @@
 	left:0;
 	top:59px;
 	position:absolute;
-	overflow:visible;
 	width:160px;
 	white-space:nowrap;
 	text-align:left;
@@ -196,7 +188,6 @@
 	left:0;
 	top:0;
 	position:absolute;
-	overflow:visible;
 	width:109px;
 	white-space:nowrap;
 	text-align:left;
@@ -214,7 +205,6 @@
 	height:134px;
 	left:0;
 	top:194px;
-	overflow:visible
 	}
 	
 	#Rectangle_s {
@@ -229,7 +219,6 @@
 	
 	.Rectangle_s {
 	position:absolute;
-	overflow:visible;
 	width:851px;
 	height:2px;
 	left:0;
@@ -241,7 +230,6 @@
 	left:0;
 	top:62px;
 	position:absolute;
-	overflow:visible;
 	width:116px;
 	white-space:nowrap;
 	text-align:left;
@@ -256,7 +244,6 @@
 	left:0;
 	top:0;
 	position:absolute;
-	overflow:visible;
 	width:68px;
 	white-space:nowrap;
 	text-align:left;
@@ -274,7 +261,6 @@
 	height:120.402px;
 	left:0;
 	top:0;
-	overflow:visible
 	}
 	
 	#Rectangle_w {
@@ -288,7 +274,6 @@
 	}
 	
 	.Rectangle_w {
-	overflow:visible;
 	position:absolute;
 	width:851px;
 	height:2.229px;
@@ -302,7 +287,6 @@
 	left:0;
 	top:47px;
 	position:absolute;
-	overflow:visible;
 	width:89px;
 	white-space:nowrap;
 	text-align:left;
@@ -317,7 +301,6 @@
 	left:0;
 	top:0;
 	position:absolute;
-	overflow:visible;
 	width:92px;
 	white-space:nowrap;
 	text-align:left;
@@ -333,16 +316,14 @@
 	position:absolute;
 	width:729px;
 	height:730px;
-	left:0;
-	top:192.667px;
-	overflow:visible
+	left:0px;
+	top: 192.667px;
 	}
 	
 	#contact_ {
-	left:257.384px;
-	top:0;
+	left:10%;
+	top:0%;
 	position:absolute;
-	overflow:visible;
 	width:966px;
 	height:106px;
 	text-align:center;
@@ -359,14 +340,12 @@
 	height:1447.012px;
 	left:231px;
 	top:3321.47px;
-	overflow:visible
 	}
 	
 	#aboutdesc {
 	left:896.909px;
 	top:270.012px;
 	position:absolute;
-	overflow:visible;
 	width:723px;
 	height:1177px;
 	line-height:50px;
@@ -383,7 +362,6 @@
 	left:172.075px;
 	top:0;
 	position:absolute;
-	overflow:visible;
 	width:1171px;
 	height:106px;
 	text-align:center;
@@ -400,7 +378,6 @@
 	height:1132px;
 	left:0;
 	top:228.512px;
-	overflow:visible
 	}
 	
 	#nav {
@@ -409,7 +386,6 @@
 	height:140px;
 	left:117px;
 	top:0;
-	overflow:visible
 	}
 	
 	#Component_18 {
@@ -418,7 +394,6 @@
 	height:41.108px;
 	left:1436.576px;
 	top:59.892px;
-	overflow:visible
 	}
 	
 	#social-instagram_-_simple-line {
@@ -440,7 +415,6 @@
 	}
 	
 	.YouTube-Icon-White-Logowine {
-	overflow:visible;
 	position:absolute;
 	width:57.961px;
 	height:40.836px;
@@ -454,7 +428,6 @@
 	}
 	
 	.tumblr-white-icon {
-	overflow:visible;
 	position:absolute;
 	width:23.183px;
 	height:40.943px;
@@ -479,7 +452,6 @@
 	left:0;
 	top:56px;
 	position:absolute;
-	overflow:visible;
 	width:478px;
 	white-space:nowrap;
 	text-align:left;
@@ -498,7 +470,6 @@
 	height:140px;
 	left:830.783px;
 	top:0;
-	overflow:visible
 	}
 	
 	#spoopilogowhite_bc {
@@ -507,7 +478,6 @@
 	height:140px;
 	left:0;
 	top:0;
-	overflow:visible
 	}
 	
 	#gallery {
@@ -516,7 +486,6 @@
 	height:2041.861px;
 	left:201.425px;
 	top:1147.018px;
-	overflow:visible
 	}
 
 	#gallery img {
@@ -542,7 +511,6 @@
 	height:422px;
 	left:0;
 	top:181.964px;
-	overflow:visible;
 	cursor: pointer;
   	transition: 0.3s;
 	}
@@ -556,7 +524,6 @@
 	height:202.291px;
 	left:769.516px;
 	top:181.964px;
-	overflow:visible;
 	cursor: pointer;
   	transition: 0.3s;
 	}
@@ -568,7 +535,6 @@
 	height:569.395px;
 	left:769.516px;
 	top:1425.75px;
-	overflow:visible;
 	cursor: pointer;
   	transition: 0.3s;
 	}
@@ -580,7 +546,6 @@
 	height:616.11px;
 	left:1176px;
 	top:1425.75px;
-	overflow:visible;
 	cursor: pointer;
   	transition: 0.3s;
 	}
@@ -592,7 +557,6 @@
 	height:421.094px;
 	left:0;
 	top:642.928px;
-	overflow:visible;
 	cursor: pointer;
   	transition: 0.3s;
 	}
@@ -604,7 +568,6 @@
 	height:493.295px;
 	left:769.516px;
 	top:397.405px;
-	overflow:visible;
 	cursor: pointer;
   	transition: 0.3s;
 	}
@@ -616,7 +579,6 @@
 	height:421.094px;
 	left:0;
 	top:1102.985px;
-	overflow:visible;
 	cursor: pointer;
   	transition: 0.3s;
 	}
@@ -628,7 +590,6 @@
 	height:493.295px;
 	left:769.516px;
 	top:910.804px;
-	overflow:visible;
 	cursor: pointer;
   	transition: 0.3s;
 	}
@@ -640,7 +601,6 @@
 	height:421.875px;
 	left:0;
 	top:1563.043px;
-	overflow:visible;
 	cursor: pointer;
   	transition: 0.3s;
 	}
@@ -649,7 +609,6 @@
 	left:308.283px;
 	top:0;
 	position:absolute;
-	overflow:visible;
 	width:874px;
 	height:106px;
 	text-align:center;
@@ -664,7 +623,6 @@
 	left:201px;
 	top:496px;
 	position:absolute;
-	overflow:visible;
 	width:405px;
 	height:152px;
 	line-height:55px;
@@ -686,7 +644,6 @@
 	height:600px;
 	left:701px;
 	top:272px;
-	overflow:visible
 	}
 	
 	#title {
