@@ -19,6 +19,10 @@ if (!window.SA) {window.SA = {};}
 
 SA.redirection_mobile = function(configuration) {
 
+	if (config.beforeredirection_callback && !config.beforeredirection_callback.call(this)) {
+		return;
+	}
+
 	// Helper function for adding time to the current date -> used by cookie
 	var addTimeToDate = function(msec) {
 		var exdate = new Date();
@@ -54,7 +58,7 @@ SA.redirection_mobile = function(configuration) {
 	// Retrieve the User Agent of the browser
 	var agent = navigator.userAgent.toLowerCase(),
 	console.log("User Agent: ", agent);
-	
+
 	var FALSE = "false",
 	TRUE = "true",
 
@@ -146,9 +150,6 @@ SA.redirection_mobile = function(configuration) {
 	if ((isUATablet || isUAMobile) && !(isCookieSet || isSessionStorage)) {
 
 		// Callback call
-		if (config.beforeredirection_callback && !config.beforeredirection_callback.call(this)) {
-            return;
-        }
 		/*if (config.beforeredirection_callback) {
 			if (!config.beforeredirection_callback.call(this)) {
 				return;
