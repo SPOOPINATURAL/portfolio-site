@@ -33,12 +33,23 @@
     	margin: 0;
     	max-width: 100%;
     	font-family: var(--font-family-main);
+		cursor: url('/../cursor/pointer.cur'), auto !important;
     }
+
+	.text-hover {
+		cursor: url('/../cursor/text.cur'), text !important; /* Custom cursor for text */
+	}
+
+	.clickable-hover {
+		cursor: url('/../cursor/link.cur'), pointer !important; /* Custom cursor for clickable items */
+	}
 
 	img {
         max-width: 100%; /* Ensure images don't exceed the viewport */
 		height: auto;
     }
+
+	
 	
 	#web {
 	/* position:absolute; */
@@ -461,6 +472,7 @@
 	.YouTube-Icon-White-Logowine:hover,
 	.tumblr-white-icon:hover {
     		opacity: 0.8; /* Reduced opacity on hover */
+			cursor: url('/../cursor/link.cur'), pointer !important;
 	}
 	
 	#mordecaihsu {
@@ -505,6 +517,22 @@
 	left:201.425px;
 	top:1147.018px;
 	overflow:visible
+	}
+
+	#gallery img {
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	#gallery img:hover {
+		transform: scale(1.05); /* Makes the image slightly larger */
+		opacity: 0.9; /* Slightly dims the image */
+		cursor: url('/../cursor/link.cur'), pointer !important;
+	}
+
+	body.modal-open #gallery img:hover {
+		transform: none;
+		opacity: 1;
+		cursor: url('/../cursor/pointer.cur'), auto !important;
 	}
 	
 	#pfp {
@@ -705,6 +733,7 @@
 	font-size:80px;
 	color:#fff1c2ff
 	}
+	
 
 	.rectangle-input textarea {
 		width: 100%; 
@@ -715,6 +744,7 @@
 		background-color: transparent;
 		color:#fff1c2ff;
 		resize: none;
+		cursor: url('/../cursor/text.cur'), text !important;
 	}
 
 	.rectangle-input textarea::placeholder {
@@ -730,12 +760,14 @@
 		padding: 1px; 
 		background-color: transparent; 
 		color:#fff1c2ff; 
+		cursor: url('/../cursor/text.cur'), text !important;
 	}
 	
 	.rectangle-input input[type="text"]::placeholder,
 	.rectangle-input input[type="email"]::placeholder {
 		color: #fff1c2ff; 
-		opacity: 0.4; 
+		opacity: 0.4;
+		cursor: url('/../cursor/text.cur'), text !important; 
 	}
 
 	#button {
@@ -746,17 +778,19 @@
 		background-color: transparent;
 		border: none;
 		padding: 0;
-		cursor: pointer;
+		cursor: url('/../cursor/link.cur'), pointer !important;
 	}
 	
 	#sendButton svg.Rectangle rect {
 		fill: #00000000; /* Initial fill color */
 		transition: fill 0.3s ease; /* Smooth transition for fill color change */
+		cursor: url('/../cursor/link.cur'), pointer !important;
 	}
 
 	#sendButton:hover svg.Rectangle {
 		fill: #00000080; /* Darker fill color on hover */
-		opacity: 0.45
+		opacity: 0.45;
+		cursor: url('/../cursor/link.cur'), pointer !important;
 	}
 	
 	#sendButton div#SEND {
@@ -771,15 +805,21 @@
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 9999; /* Sit on top */
-	padding-top: 100px; /* Location of the box */
+	padding-top: 10px; /* Location of the box */
 	left: 0;
 	top: 0;
 	width: 100%; /* Full width */
 	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
+	overflow: hidden; /* Enable scroll if needed */
 	background-color: rgb(0,0,0); /* Fallback color */
 	background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
+
+body.modal-open {
+    overflow: hidden; /* Prevents scrolling */
+    height: 100%; /* Prevents page height from changing */
+}
+
 /* Modal Content (image) */
 .modal-content {
 	display: flex; /* Use flexbox */
@@ -788,6 +828,7 @@
 	width: 100%; /* Ensure the modal content spans the entire width of the modal */
 	height: 100%; /* Ensure the modal content spans the entire height of the modal */
 	overflow: hidden;
+	position: absolute;
 }
 
 .modal-content img {
@@ -797,6 +838,7 @@
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	position: absolute;
 }
 
 #myModal3 .modal-content,
@@ -806,6 +848,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+	position: absolute;
 }
 
 #myModal3 .modal-content img,
@@ -849,8 +892,18 @@
   .close:focus {
 	color: #bbb;
 	text-decoration: none;
-	cursor: pointer;
+	cursor: url('/../cursor/link.cur'), pointer !important;
   }
+
+  /* Ko-fi button styles */
+.kofi-widget {
+    position: fixed; /* or absolute if needed */
+    z-index: 500; /* Lower z-index than modal */
+}
+
+#kofiWidgetOverlay {
+	z-index: 500; /* Ensure it's lower than the modal */
+}
   
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
@@ -891,6 +944,7 @@
 	.rectangle-input textarea, .rectangle-input input[type="text"], .rectangle-input input[type="email"] {
 		width: 100%;
 		max-width: 100%;
+		cursor: url('/../cursor/link.cur'), pointer !important;
 	}
 
 	#SEND {
