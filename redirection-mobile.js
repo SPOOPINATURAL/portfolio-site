@@ -53,9 +53,10 @@ SA.redirection_mobile = function(configuration) {
 				
 	// Retrieve the User Agent of the browser
 	var agent = navigator.userAgent.toLowerCase(),
-		console.log("User Agent: ", agent);
-		FALSE = "false",
-		TRUE = "true",
+	console.log("User Agent: ", agent);
+	
+	var FALSE = "false",
+	TRUE = "true",
 
 		// configuration object
 		config = configuration || {},
@@ -173,7 +174,7 @@ SA.redirection_mobile = function(configuration) {
 			window.location.replace(mobile_protocol + "//" + tablet_host + path_query);
 		} else if (isUAMobile) {
 			console.log("Redirecting to mobile site for Chrome or any mobile browser...");
-			window.location.replace(mobile_protocol + "//" + mobile_host + window.location.pathname);
+			window.location.replace(mobile_protocol + "//" + mobile_host + path_query);
 		}
 	} 
 ;	
