@@ -27,7 +27,7 @@
             		width: 0;
             		height: 0;
         	}
-		 #message textarea,
+		#message textarea,
         #email input,
         #name input {
             width: 100%;
@@ -82,7 +82,18 @@
 		<script>
 			// Prevent right-click context menu
 			document.getElementById('spoopibg').addEventListener('contextmenu', function(e) {
+				e.stopPropagation();
 				e.preventDefault();
+				// Trigger the normal context menu
+				setTimeout(() => {
+           		 const evt = new MouseEvent('contextmenu', {
+                		bubbles: true,
+                		cancelable: true,
+                		clientX: e.clientX,
+                		clientY: e.clientY,
+           		 });
+            		document.dispatchEvent(evt);
+        		}, 0); // Slight delay to ensure proper event handling
 			});
 	
 			// Prevent dragging
@@ -149,7 +160,30 @@
 				</a>
 			</div>
 			<div id="mordecaihsu"> <span>MORDECAI HSU | 2D ANIMATOR | ILLUSTRATOR</span> </div>
-			<div id="spoopilogowhite" class="spoopilogowhite"> <img id="spoopilogowhite_bc" src="images/spoopilogowhite_bc.png" srcset="images/spoopilogowhite_bc.png 1x, images/spoopilogowhite_bc@2x.png 2x"> </div>
+			<div id="spoopilogowhite" class="spoopilogowhite"> <img id="spoopilogowhite_bc" src="images/spoopilogowhite_bc.png" srcset="images/spoopilogowhite_bc.png 1x, images/spoopilogowhite_bc@2x.png 2x">
+				<script>
+					// Prevent right-click context menu
+					document.getElementById('spoopilogowhite').addEventListener('contextmenu', function(e) {
+						e.stopPropagation();
+						e.preventDefault();
+						// Trigger the normal context menu
+						setTimeout(() => {
+							const evt = new MouseEvent('contextmenu', {
+								bubbles: true,
+								cancelable: true,
+								clientX: e.clientX,
+								clientY: e.clientY,
+							});
+							document.dispatchEvent(evt);
+						}, 0); // Slight delay to ensure proper event handling
+					});
+			
+					// Prevent dragging
+					document.getElementById('spoopilogowhite').addEventListener('dragstart', function(e) {
+						e.preventDefault();
+					});
+				</script>
+			</div>
 		</div>
 		<div id="gallery">
 			<a href="#myModal1" class="modal-trigger">
